@@ -50,7 +50,7 @@ class Linkedin:
                         jobID = temp.split(":")[-1]
                         IDs.append(int(jobID))
                     except:
-                        print("Error occurred getting the job ID")
+                        print("🔴 Error occurred getting the job ID")
                 IDs = set(IDs)
                 jobIDs = [x for x in IDs]
                 for jobID in jobIDs:
@@ -61,7 +61,7 @@ class Linkedin:
                         count_job += 1
                         time.sleep(7)
                     except:
-                        print("Error occurred getting the job")
+                        print("🔴 Error occurred getting the job")
                     try:
                         button = self.driver.find_elements_by_xpath(
                             '//button[contains(@class, "jobs-apply-button")]/span[1]')
